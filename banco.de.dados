@@ -1,0 +1,14 @@
+-- Criar tabela
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY, -- SERIAL é auto-increment no PostgreSQL
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    urlfoto VARCHAR(255) NOT NULL,
+    descricao TEXT
+);
+
+-- Inserir produtos
+INSERT INTO produtos (nome, preco, urlfoto, descricao) VALUES
+('Café Especial', 12.50, 'https://exemplo.com/cafe.jpg', 'Café 100% arábica torrado na hora'),
+('Bolo de Chocolate', 25.00, 'https://exemplo.com/bolo.jpg', 'Bolo fofinho com cobertura de chocolate'),
+('Suco Natural', 8.90, 'https://exemplo.com/suco.jpg', 'Suco de laranja fresco, sem conservantes');
